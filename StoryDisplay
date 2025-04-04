@@ -3,7 +3,7 @@ import React from "react";
 export default function StoryDisplay({ story, loading, input, setInput, continueStory }) {
   return (
     <div className="flex flex-col h-full">
-      {/* Story text area */}
+      {/* Scrollable story text area */}
       <div className="flex-1 bg-gray-800 p-4 rounded overflow-y-auto whitespace-pre-wrap">
         {story.map((chunk, i) => (
           <p key={i} className="mb-3">{chunk}</p>
@@ -11,9 +11,9 @@ export default function StoryDisplay({ story, loading, input, setInput, continue
         {loading && <p className="italic text-gray-400">Thinking...</p>}
       </div>
 
-      {/* Input box */}
+      {/* Input area */}
       <input
-        className="w-full p-3 mt-4 rounded bg-gray-800 text-white"
+        className="w-full p-3 mt-4 rounded bg-gray-800 text-white border border-gray-600"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="What do you do next?"
