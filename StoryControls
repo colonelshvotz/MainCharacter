@@ -78,6 +78,7 @@ export default function StoryControls({
       >
         🧪 Manually Save Chapter
       </button>
+
       <button
         onClick={handleSaveAndExit}
         className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded mt-4"
