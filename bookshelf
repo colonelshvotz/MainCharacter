@@ -206,12 +206,12 @@ export default function BookshelfPage() {
   }
 
   return (
-<div className="h-screen overflow-auto">
+
 
     <StoryLayout characterImage={characterImage}>
       
     {/* Left: Story Reader */}
-    <div className="flex-1">
+    
           <StoryDisplay
             story={story}
             loading={loading}
@@ -219,7 +219,7 @@ export default function BookshelfPage() {
             setInput={setInput}
             continueStory={continueStory}
           />
-      </div>
+      
 
     {/* Right: Buttons */}
       <StoryControls
@@ -269,6 +269,6 @@ export default function BookshelfPage() {
       <MomentImageGallery momentImages={momentImages} />
       <ErrorDisplay error={error} />
     </StoryLayout>
-    </div>
+    
   );
 }
