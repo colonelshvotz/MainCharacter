@@ -39,16 +39,17 @@ export default function BookshelfPage() {
 
 
 
-  const fetchEmpathyScores = async () => {
-    try {
-      const res = await fetch("http://localhost:8000/developer/empathy-scores");
-      const data = await res.json();
-      setEmpathyData(data);
-      setShowDevPanel(true);
-    } catch (err) {
-      console.error("Failed to load empathy scores:", err);
-    }
-  };
+const fetchEmpathyScores = async () => {
+  try {
+    const res = await fetch("http://localhost:8000/developer/trait-scores");
+    const data = await res.json();
+    setEmpathyData(data);          // reuse existing state
+    setShowDevPanel(true);         // opens your developer panel
+  } catch (err) {
+    console.error("Failed to load trait scores:", err);
+  }
+};
+
 
   const startStory = async () => {
     const title = isNewBook ? newBookTitle : selectedBook;
